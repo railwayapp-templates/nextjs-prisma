@@ -1,5 +1,5 @@
 import useSWR, { mutate } from "swr";
-import { Todo } from "./types";
+import { Todo } from '@prisma/client'
 
 const todoPath = "/api/todos";
 
