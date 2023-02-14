@@ -1,9 +1,12 @@
 import useSWR, { mutate } from "swr";
 import { Todo } from "./types";
 
+const fetcher = (input: RequestInfo, init?: RequestInit) =>
+  fetch(input, init).then((res) => res.json());
+
 const todoPath = "/api/todos";
 
-export const useTodos = () => useSWR<Todo[]>(todoPath);
+export const useTodos = () => useSWR<Todo[]>(todoPath, fetcher);
 
 export const createTodo = async (text: string) => {
   mutate(
