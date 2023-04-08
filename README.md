@@ -26,6 +26,7 @@ This example is a [NextJS](https://nextjs.org/) todo app that uses
 
 - [Provision a Postgres container on Railway](https://dev.new)
 - Connect to your Railway project with `railway link`
+- Set a local connection to the database by setting `DATABASE_URL=<DATABASE_URL>` in `.env` file (replace `<DATABASE_URL>` with a connection string. For example, you could copy the value from Postgres container settings in the "Connect" section).
 - Migrate the database `railway run yarn migrate:dev`
 - Run the NextJS app `railway run yarn dev`
 
