@@ -1,5 +1,5 @@
 import useSWR, { mutate } from "swr";
-import { Todo } from "./types";
+import { Todo } from '@prisma/client'
 
 const fetcher = (input: RequestInfo, init?: RequestInit) =>
   fetch(input, init).then((res) => res.json());

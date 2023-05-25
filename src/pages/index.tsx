@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useMemo, useState } from "react";
 import { createTodo, deleteTodo, toggleTodo, useTodos } from "../api";
 import styles from "../styles/Home.module.css";
-import { Todo } from "../types";
+import { Todo } from "@prisma/client";
 
 export const TodoList: React.FC = () => {
   const { data: todos, error } = useTodos();
